@@ -24,39 +24,133 @@
     </nav>
 
     <main>
+    
+    <div id="linha">
         <form action="">
 
-            <label>Processador
+            <label> 
+                <div>
+                    <h4>Placa Mãe</h4>
+                    <img src="img/placa.jpg" alt="placa mae">
+                    <input type="radio" name="placamae" value="pamd" id="" onclick="carregarplacamae(this.value)">AMD
+                    <input type="radio" name="placamae" value="pintel" id="" onclick="carregarplacamae(this.value)">Intel
+            </label>
+            
+                    <select name="" id="placamae">
+
+                    </select>
+                </div>
+        </form>
+    
+
+        <form action="">
+
+            <label>
+            <div>
+                <h4>Processador</h4>
+                <img src="img/processador.png" alt="processador">
                 <input type="radio" name="processador" value="amd" id="" onclick="carregarprocessador(this.value)">AMD
                 <input type="radio" name="processador" value="intel" id="" onclick="carregarprocessador(this.value)">Intel
             </label>
 
-            <select name="" id="processador">
+                <select name="" id="processador">
 
-            </select>
+                </select>
+            </div>
+        </form>
 
-            <label>Memória RAM
-                <input type="checkbox" name="processador" value="amd" id="" onclick="carregarprocessador(this.value)">AMD
+        <form action="">
+
+            <label>
+                <div>
+                    <h4>Memória RAM</h4>
+                    <img src="img/memoriaram.jpg" alt="memória ram">
+                    <input type="radio" name="memoriaram" value="memoriaram" id="" onclick="carregarram(this.value)"> 
             </label>
 
-            <select name="" id="processador">
+                <select name="" id="mem">
 
-            </select>
+                </select>
+            </div>
 
-
-
-
-
-            <select name="" id="">
-                <option value="">Placa Mãe</option>
-                <option value="">Processador</option>
-                <option value="">Memória RAM</option>
-                <option value="">Cooler</option>
-                <option value="">Fonte</option>
-                <option value="">SSD/HD</option>
-                <option value="">Gabinete</option>
-            </select>
         </form>
+
+        <form action="">
+
+            <label>
+                <div>
+                    <h4>Placa de Vídeo</h4>
+                    <img src="img/placadevideo.jfif" alt="placa de vídeo">
+                    <input type="radio" name="placadevideo" value="placadevideo" id="" onclick="carregarvideo(this.value)"> 
+            </label>
+
+                <select name="" id="placadevideo">
+
+                </select>
+            </div>
+
+        </form>
+
+        <form action="">
+        <label>
+            <div>
+                <h4>Cooler</h4>
+                <img src="img/cooler.jpeg" alt="cooler">
+                <input type="radio" name="cooler" value="cooler" id="" onclick="carregarcooler(this.value)"> 
+        </label>
+
+                <select name="" id="cooler">
+
+                </select>
+            </div>
+
+        </form>
+
+        <form action="">
+            <label>
+                <div>
+                    <h4>Fonte</h4>
+                    <img src="img/fonte.jpeg" alt="fonte">  
+                    <input type="radio" name="fonte" value="fonte" id="" onclick="carregarfonte(this.value)"> 
+            </label>
+    
+                <select name="" id="fonte">
+        
+                </select>
+            </div>
+        </form>
+
+        <form action="">
+
+            <label>
+                <div>
+                    <h4>Armazenamento</h4>
+                    <img src="img/hd.jfif" alt="ssd, hd e nvme">
+                    SSD  <input type="radio" name="armazenamento" value="ssd" id="" onclick="carregararmazenamento(this.value)">
+                    HD  <input type="radio" name="armazenamento" value="hd" id="" onclick="carregararmazenamento(this.value)">
+                    NVME  <input type="radio" name="armazenamento" value="nvme" id="" onclick="carregararmazenamento(this.value)">
+            </label>
+
+                    <select name="" id="armazenamento">
+
+                    </select>
+                </div>
+        </form>      
+        
+        <form action="">
+            <label>
+                <div>
+                <h4>Gabinete</h4>
+                <img src="img/computador.jpg" alt="gabinete">
+                <input type="radio" name="gabinete" value="gabinete" id="" onclick="carregargabinete(this.value)"> 
+            </label>
+    
+                <select name="" id="gabinete">
+        
+                </select>
+            </div>
+        </form>
+    </div>
 
     </main>
 
