@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+/*  Inicio do Header */
 h1 {
   text-align: center;
   background-image: url(../img/placamae.jpg);
@@ -12,15 +13,13 @@ h1 {
   color: white;
   font-family: verdana;
 }
+/* Fim do Header */
 
+/* Inicio do Nav */
 nav {
   text-align: center;
   background-color: black;
   margin-top: -20px;
-}
-
-.painel {
-  margin-top: -16px;
 }
 
 nav ul li {
@@ -34,6 +33,12 @@ nav ul li a {
   font-family: arial;
 }
 
+nav ul li a:hover {
+  color: rgb(241, 50, 50);
+}
+/* Fim do Nav */
+
+/* Inicio do Footer */
 footer {
   background-color: black;
   display: flex;
@@ -52,52 +57,101 @@ footer {
   padding-top: 20px;
 }
 
-h2 {
+footer h2 {
   font-family: arial;
   color: white;
   text-align: center;
   padding: 10px;
 }
+/* Fim do Footer */
 
+/* Inicio do css da pagina monte seu pc */
 h3 {
-  font-family: arial;
+  font-family: verdana;
   font-size: 20pt;
   margin: 30px;
   text-align: center;
 }
 
-#linha {
-  padding: 40px;
-  margin: 10px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap; /*quebra de linha*/
-  box-shadow: 3px 3px 5px rgb(32, 18, 18);
-  justify-content: center;
+h2 {
+  color: black;
+  font-family: verdana;
+  text-align: center;
+  padding-top: 20px;
 }
 
-#linha div {
+#linha {
+  padding: 40px;
+  margin: 50px;
+  display: flex;
+  flex-direction: row; /*quebra de linha*/
+  flex-wrap: wrap;
+  box-shadow: 3px 3px 5px black;
+  justify-content: center;
+  text-align: center;
+}
+
+#linha form {
   width: 30%;
-  margin: 10px;
-  border: 2px solid rgb(32, 18, 18);
+  border: 2px solid black;
+  padding: 15px;
+  margin: 20px;
+  border-radius: 20px;
+  transition: ease 1s;
+}
+
+#linha form:hover {
+  transform: scale(1.1);
 }
 
 #linha div img {
   width: 100%;
-  height: 320px;
+  height: 300px;
   cursor: pointer;
+  border-radius: 20px;
 }
 
 #linha div h4 {
-  font-family: sans-serif;
+  font-family: verdana;
   font-size: 15pt;
   text-align: center;
 }
 
-#linha div p {
-  font-family: sans-serif;
-  font-size: 15pt;
-  color: rgb(32, 18, 18);
+#linha div select {
+  font-family: verdana;
+  display: flex;
   text-align: center;
-  font-weight: bold;
 }
+
+#placamae {
+  opacity: 0;
+}
+
+#processador {
+  opacity: 0;
+}
+
+#mem {
+  opacity: 0;
+}
+
+#placadevideo {
+  opacity: 0;
+}
+
+#cooler {
+  opacity: 0;
+}
+
+#fonte {
+  opacity: 0;
+}
+
+#armazenamento {
+  opacity: 0;
+}
+
+#gabinete {
+  opacity: 0;
+}
+/* Fim da formatação da pagina monte seu pc */
