@@ -47,48 +47,26 @@
 
     <main>
 
-        <div id="secaoVendas">
-            <h2>Mega Promoções</h2>
-        </div>
-
-            <div id="megaPromocoes">
-            
+        <div id="loginCadastro">
             <div>
-                <img src="img/hardware/placadevideortx3060.jpg" alt="">
-                <h4>Placa de Vídeo Zotac NVIDIA GeForce RTX 3060 Ti Twin Edge LHR, 8GB, 14.0 Gbps, GDDR6, DLSS, Ray Tracing</h4>
-                <p>R$4.299,90</p>
+                <form action="">
+                    <input type="email" placeholder="Digite seu email" required>
+                    <input type="password" placeholder="Digite sua senha" required>
+
+                    <input type="submit" value="Entrar">
+                </form>
             </div>
 
             <div>
-                <img src="img/hardware/headsethyperx.jpg" alt="">
-                <h4>Headset Gamer HyperX Cloud Stinger, Drivers 50mm, Múltiplas Plataformas, P2 e P3</h4>
-                <p>R$199,90</p>
-            </div>
+                <form onsubmit="return false">
+                    <input type="text" placeholder="Digite seu nome completo" id="nome" required>
+                    <input type="email" placeholder="Digite seu email" id="email" required>
+                    <input type="password" placeholder="Crie uma senha" id="senha" required>
+                    <input type="text" placeholder="Digite seu CPF" id="cpf" onclick="validaCPF()" required>
 
-            <div>
-                <img src="img/hardware/smarttv.jpg" alt="">
-                <h4>Smart TV 50 4k QLED Samsung 50Q80A, HDMI, USB, Modo Game, Processador IA, Pontos Quânticos, Alexa e Google Assistant, Preto</h4>
-                <p>R$3.609,05</p>
+                    <input type="submit" value="Cadastrar" onclick="Cadastro()">
+            </form>
             </div>
-
-            <div>
-                <img src="img/hardware/webcam.jpg" alt="">
-                <h4>Webcam Full HD Logitech C920s com Microfone Embutido, Proteção de Privacidade, Widescreen 1080p, Compatível Logitech Capture</h4>
-                <p>R$369,90</p>
-            </div>
-
-            <div>
-                <img src="img/hardware/cadeiragamer.jpg" alt="">
-                <h4>Cadeira Gamer Husky Gaming Snow, Preto, Cilindro de Gás Classe 4, Base em Metal, Roda em Nylon</h4>
-                <p>R$619,90</p>
-            </div>
-
-            <div>
-                <img src="img/hardware/processadori3.jpg" alt="">
-                <h4>Processador Intel Core i3-10100F, Cache 6MB, 4.30 GHz, LGA 1200</h4>
-                <p>R$659,90</p>
-            </div>
-
         </div>
 
     </main>

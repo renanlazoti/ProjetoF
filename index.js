@@ -24,10 +24,16 @@ const default_route = "/api/pc";
 const tabelapc = mongoose.Schema({
     nome:{type:String,require},
     email:{type:String,require},
-    telefone:{type:String},
-    cidades:{type:String}
+    senha:{type:String,require},
+    cpf:{type:String,require},
 });
 
+const tabeladuvida = mongoose.Schema({
+    nome:{type:String,require},
+    email:{type:String,require},
+    senha:{type:String,require},
+    cpf:{type:String,require},
+});
 
 
 const Computador = mongoose.model("tbpc",tabelapc);
@@ -39,6 +45,8 @@ app.get(`${default_route}/listar`,(req,res)=>{
         
         res.status(200).send({output:dados});
     })
+
+    
 
     .catch((erro) => res
         .status(500)

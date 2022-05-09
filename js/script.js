@@ -124,3 +124,34 @@ function carregarGabinete(valor){
         document.getElementById("gabinete").innerHTML += `<option value=${gabinete[i]}>${gabinete[i]}</option>`;
     }
 }
+
+function Cadastro(){
+    const nome = document.getElementById("nome")
+    const email = document.getElementById("email")
+    const senha = document.getElementById("senha")
+    const cpf = document.getElementById("cpf")
+
+    fetch("http://localhost:4002/api/pc/cadastrar", {
+        method: "POST", 
+        headers: {
+            accept: "application/json",
+            "content-type": "application/json"
+        },
+        body: JSON.stringify({
+            nome:nome.value,
+            email:email.value,
+            senha:senha.value,
+            cpf:cpf.value,
+        })
+    })
+    .then((resultado) => resultado.json())
+    .then((dados) => {
+        alert(`${dados.output}`)
+        // limpar o formulario
+        nome.value = "";
+        email.value = "";
+        senha.value = "";
+        cpf.value = ""
+    })
+    .catch((err) => console.error(err));
+}
