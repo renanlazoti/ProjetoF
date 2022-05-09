@@ -1,10 +1,23 @@
-function carregarPlacaMae(valor){
+var pcs = {
+    "AMD": {
+        "processadores":  ["Ryzen 3", "Ryzen 5", "Ryzen 7", "Ryzen 9"],
+        "placaMae": ["A320", "B450", "X570"],
+        "memoria": ["DDR1", "DDR2", "DDR3", "DDR4"],
+        "placadevideo": ["GTX", "RTX", "RX"]
+    },
+    "INTEL": {
+        "processadores":  ["i3", "i5", "i7", "i9"],
+        "placaMae": ["H110", "B560", "Z490"],
+        "memoria": ["DDR1", "DDR2", "DDR3", "DDR4", "DDR5"],
+        "placadevideo": ["GTX", "RTX", "RX"]
+    }
+}
 
+function carregarplacamae(valor){
+
+    let tiposPlacaMae = pcs.AMD
     document.getElementById("placaMae").style.opacity=1;
-    var placaMaeIntel = ["Selecione a placa mãe","H110", "B560", "Z490"]
-    
-    var placaMaeAmd = ["Selecione a placa mãe", "A320", "B450", "X570"]
-    
+   
     document.getElementById("placaMae").innerHTML="";
     if(valor == "placaMaeAmd"){
         
@@ -17,52 +30,51 @@ function carregarPlacaMae(valor){
     }
 }
 
-function carregarProcessador(valor){
+function carregarprocessador(valor){
 
     document.getElementById("processador").style.opacity=1;
-    var processadorIntel = ["Selecione o processador","i3", "i5", "i7", "i9"]
+    var intel = ["Selecione o processador","i3", "i5", "i7", "i9"]
 
-    var processadorAmd = ["Selecione o processador","Ryzen 3", "Ryzen 5", "Ryzen 7", "Ryzen 9"]
+    var amd = ["Selecione o processador","Ryzen 3", "Ryzen 5", "Ryzen 7", "Ryzen 9"]
 
     document.getElementById("processador").innerHTML="";
-    if(valor == "processadorAmd"){
+    if(valor == "amd"){
         
-        for(var i = 0; i < processadorAmd.length;i++)
-        document.getElementById("processador").innerHTML += `<option value=${processadorAmd[i]}>${processadorAmd[i]}</option>`;
+        for(var i = 0; i < amd.length;i++)
+        document.getElementById("processador").innerHTML += `<option value=${amd[i]}>${amd[i]}</option>`;
     }
-    if(valor == "processadorIntel"){
-        for(var i = 0; i < processadorIntel.length;i++)
-        document.getElementById("processador").innerHTML += `<option value=${processadorIntel[i]}>${processadorIntel[i]}</option>`;
+    if(valor == "intel"){
+        for(var i = 0; i < intel.length;i++)
+        document.getElementById("processador").innerHTML += `<option value=${intel[i]}>${intel[i]}</option>`;
     }
 }
 
-function carregarRam(valor){
+function carregarram(valor){
 
-    document.getElementById("memoriaRam").style.opacity=1;
-    var memoriaRam = ["Selecione a memória RAM", "DDR2", "DDR3", "DDR4", "DDR5"]
+    document.getElementById("mem").style.opacity=1;
+    var memoriaram = ["Selecione a memória RAM", "DDR2", "DDR3", "DDR4", "DDR5"]
 
-    if(valor == "memoriaRam"){
-        
-        document.getElementById("memoriaRam").innerHTML="";
-        for(var i = 0; i < memoriaRam.length;i++)
-        document.getElementById("memoriaRam").innerHTML += `<option value=${memoriaRam[i]}>${memoriaRam[i]}</option>`;
+    if(valor == "memoriaram"){
 
+        document.getElementById("mem").innerHTML="";
+        for(var i = 0; i < memoriaram.length;i++)
+        document.getElementById("mem").innerHTML += `<option value=${memoriaram[i]}>${memoriaram[i]}</option>`;
     }
 }
 
-function carregarVideo(valor){
+function carregarvideo(valor){
 
-    document.getElementById("placaDeVideo").style.opacity=1;
-    var placaDeVideo = ["Selecione a placa de video", "GTX", "RTX", "RX"]
+    document.getElementById("placadevideo").style.opacity=1;
+    var placadevideo = ["Selecione a placa de video", "GTX", "RTX", "RX"]
     
-    if(valor == "placaDeVideo"){
-        document.getElementById("placaDeVideo").innerHTML="";
-        for(var i = 0; i < placaDeVideo.length;i++)
-        document.getElementById("placaDeVideo").innerHTML += `<option value=${placaDeVideo[i]}>${placaDeVideo[i]}</option>`;
+    if(valor == "placadevideo"){
+        document.getElementById("placadevideo").innerHTML="";
+        for(var i = 0; i < placadevideo.length;i++)
+        document.getElementById("placadevideo").innerHTML += `<option value=${placadevideo[i]}>${placadevideo[i]}</option>`;
     }
     }
 
-function carregarCooler(valor){
+function carregarcooler(valor){
 
     document.getElementById("cooler").style.opacity=1;
     var cooler = ["Selecione o cooler", "Water cooler 120mm", "Water cooler 240mm", "Water cooler 360mm", "Air cooler"]
@@ -74,7 +86,7 @@ function carregarCooler(valor){
     }
 }
 
-function carregarFonte(valor){
+function carregarfonte(valor){
 
     document.getElementById("fonte").style.opacity=1;
     var fonte = ["Selecione a fonte", "300w", "400w", "500w", "600w", "700w", "800w", "900w", "1000w"]
@@ -86,7 +98,7 @@ function carregarFonte(valor){
     }
 }
     
-function carregarArmazenamento(valor){
+function carregararmazenamento(valor){
 
     document.getElementById("armazenamento").style.opacity=1;
     var ssd = ["Selecione o tamanho de armazenamento","120gb", "240gb", "480gb", "512gb", "960gb"]
@@ -113,7 +125,7 @@ function carregarArmazenamento(valor){
     }
 }
 
-function carregarGabinete(valor){
+function carregargabinete(valor){
 
     document.getElementById("gabinete").style.opacity=1;
     var gabinete = ["Selecione o gabinete", "Mini-tower", "Mid-tower", "Full-tower"]

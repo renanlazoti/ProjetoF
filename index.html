@@ -12,26 +12,79 @@
 <body>
     
     <header>
-        <h1>HardwaR's</h1>
+        <div id="hard">
+
+            <h1><a href="index.html">HardwaR's</a></h1>
+            
+            <div class="login">
+                <ul>
+                    <li><a href="login.html"><img src="img/baseline_account_circle_white_24dp.png" alt=""></a>
+                    <label>Seja Bem Vindo! <br> <a href="login.html"></a><b>entre</b></a> ou <a href="cadastro"><b>cadastre-se</b></a></label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="help">
+                <span class="material-icons">
+                    <a href="cliente.html"><img src="img/baseline_help_white_24dp.png" alt=""></a>
+                </span>
+                <h3><a href="cliente.html">Atendimento ao <b>Cliente</b></a></h3>
+            </div>
+
+            <div class="carrinho">
+                <span>
+                    <img src="img/baseline_shopping_cart_white_24dp.png" alt="">
+                </span>
+            </div>   
+        </div>
     </header>
     
     <nav>
+        
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="montepc.html">Monte seu pc</a></li>
-            <li><a href="cadastro.html">Cadastre-se</a></li>
+            <li><a href="index.html"><img src="img/baseline_home_white_24dp.png" alt=""></a> Home</li>
+            <li><a href="montepc.html"><img src="img/baseline_computer_white_24dp.png"> Monte seu pc</a></li>
         </ul>
+
     </nav>
 
     <main>
 
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/asus.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/semana.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
     </main>
 
     <footer>
-        <h2>Nossas redes</h2>
-
-        <hr>
-
+        <div id="endereco">
+            <h3>Institucional</h3>
+            
+            <p><a href="sobrenos.html">Sobre Nós</a></p>
+        </div>
         <div id="redes">
             <ul>
                 <li><a href="http://www.instagram.com" target="_blank"><img src="img/instagram.png" alt="Nosso instagram"></a></li>
@@ -42,6 +95,7 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 </body>
 </html>
