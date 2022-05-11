@@ -31,17 +31,61 @@ const tabelapc = mongoose.Schema({
 const tabeladuvida = mongoose.Schema({
     nome:{type:String,require},
     email:{type:String,require},
-    senha:{type:String,require},
-    cpf:{type:String,require},
+    telefone:{type:String,require},
+    duvida:{type:String,require},
 });
 
+const tabelacompra = mongoose.Schema({
+    nome:{type:String,require},
+    email:{type:String,require},
+    telefone:{type:String,require},
+    cpf:{type:String,require},
+    rg:{type:String,require},
+    endereco:{type:String,require},
+    casaNumero:{type:String,require}
+});
 
 const Computador = mongoose.model("tbpc",tabelapc);
+
+const Duvida = mongoose.model("tbdv",tabeladuvida);
+
+const Compra = mongoose.model("tbbuy",tabelacompra)
+
 
 // rota para listar os clientes com endpoint listar
 app.get(`${default_route}/listar`,(req,res)=>{
     
     Computador.find().then((dados)=>{
+        
+        res.status(200).send({output:dados});
+    })
+
+    
+
+    .catch((erro) => res
+        .status(500)
+        .send({output:`Erro interno ao processar a consulta -> ${erro}`}));
+    
+});
+
+app.get(`${default_route}/listarduvida`,(req,res)=>{
+    
+    Duvida.find().then((dados)=>{
+        
+        res.status(200).send({output:dados});
+    })
+
+    
+
+    .catch((erro) => res
+        .status(500)
+        .send({output:`Erro interno ao processar a consulta -> ${erro}`}));
+    
+});
+
+app.get(`${default_route}/listarcompras`,(req,res)=>{
+    
+    Compra.find().then((dados)=>{
         
         res.status(200).send({output:dados});
     })
@@ -61,6 +105,39 @@ app.post(`${default_route}/cadastrar`,(req,res)=>{
     comp.save().then((dados)=>{
         res.status(201).send({output:`Cadastro realizado`,payload:dados})
     }).catch((erro)=> console.error(`Erro ao tentar cadastrar ${erro}`));
+
+});
+
+app.post(`${default_route}/cadastrarduvida`,(req,res)=>{
+    
+    const duvida = new Duvida(req.body);
+    duvida.save().then((dados)=>{
+        res.status(201).send({output:`Sua dúvida foi enviada, em breve entraremos em contato`,payload:dados})
+    }).catch((erro)=> console.error(`Erro ao tentar enviar sua dúvida ${erro}`));
+
+});
+
+app.post(`${default_route}/cadastrarcompra`,(req,res)=>{
+    
+    const buy = new Compra(req.body);
+    buy.save().then((dados)=>{
+        res.status(201).send({output:`Compra Realizada`,payload:dados})
+    }).catch((erro)=> console.error(`Erro ao efetuar a compra ${erro}`));
+
+});
+
+// rota para atualizar os clientes com endpoint atualizar
+// passagem de argumentos pela url com id do cliente
+app.put(`${default_route}/atualizar/:id`,(req,res)=>{
+    
+    Computador.findByIdAndUpdate(req.params.id,req.body,
+        {new:true},(erro,dados)=>{
+        if(erro){
+            return res.status(500).
+            send({output:`Não atualizou -> ${erro}`})
+        }
+        res.status(200).send({output:`Dados atualizados`})
+    })
 
 });
 

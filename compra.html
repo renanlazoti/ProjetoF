@@ -47,33 +47,29 @@
 
     <main>
 
-        <div id="loginCadastro">
-            
-            <div>
-                
-                <form action="">
-                    <h2>Já tenho cadastro</h2>
-                    <input type="email" placeholder="Digite seu email" required>
-                    <input type="password" placeholder="Digite sua senha" required>
-
-                    <input type="submit" value="Entrar">
-                </form>
+    <div id="pagamento">
+        <form onsubmit="return false">
+            <h2>Selecione a forma de pagamento</h2>
+        
+            <div class="pagamento">
+                <input type="radio" name="" value="pix" id="pix"><img src="img/baseline_pix_black_24dp.png" alt=""> Pix
+                <input type="radio" name="" value="cartao" id="cartaoDeCredito"><img src="img/baseline_payment_black_24dp.png" alt="">Cartão De Crédito
+                <input type="radio" name="" value="boleto" id="boletoBancario"><img src="img/baseline_savings_black_24dp.png" alt="">Boleto Bancário
             </div>
             
-            <div>
-                
-                <form onsubmit="return false">
-                    <h2>Quero me cadastrar</h2>
-                    <input type="text" placeholder="Digite seu nome completo" id="nome" required>
-                    <input type="email" placeholder="Digite seu email" id="email" required>
-                    <input type="password" placeholder="Crie uma senha" id="senha" required>
-                    <input type="text" placeholder="Digite seu CPF" id="cpf" onclick="validaCPF()" required>
+            <h2>Dados Pessoais</h2>
+            <input type="text" placeholder="Digite seu nome completo" id="nome" required>
+            <input type="email" placeholder="Digite seu email" id="email" required>
+            <input type="tel" placeholder="Digite seu telefone" id="telefone" required>
+            <input type="text" placeholder="Digite seu CPF" id="cpf" required>
+            <input type="text" placeholder="Digite seu RG" id="rg" required>
+            <input type="text" placeholder="Digite seu Endereço" id="endereco" required>
+            <input type="number" placeholder="Insira o número da sua residência" required>
 
-                    <input type="submit" value="Cadastrar" onclick="Cadastro()">
-            </form>
-            </div>
-        </div>
+            <input type="submit" value="Compra" onclick="Compra()">
 
+        </form>
+    </div>
     </main>
 
     <footer>

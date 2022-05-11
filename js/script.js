@@ -155,3 +155,74 @@ function Cadastro(){
     })
     .catch((err) => console.error(err));
 }
+
+function Duvida(){
+    const nome = document.getElementById("nome")
+    const email = document.getElementById("email")
+    const telefone = document.getElementById("telefone")
+    const duvida = document.getElementById("duvida")
+
+    fetch("http://localhost:4002/api/pc/cadastrarduvida", {
+        method: "POST", 
+        headers: {
+            accept: "application/json",
+            "content-type": "application/json"
+        },
+        body: JSON.stringify({
+            nome:nome.value,
+            email:email.value,
+            telefone:telefone.value,
+            duvida:duvida.value,
+        })
+    })
+    .then((resultado) => resultado.json())
+    .then((dados) => {
+        alert(`${dados.output}`)
+        // limpar o formulario
+        nome.value = "";
+        email.value = "";
+        telefone.value = "";
+        duvida.value = ""
+    })
+    .catch((err) => console.error(err));
+}
+
+function Compra(){
+    const nome = document.getElementById("nome")
+    const email = document.getElementById("email")
+    const telefone = document.getElementById("telefone")
+    const cpf = document.getElementById("cpf")
+    const rg = document.getElementById("rg")
+    const endereco = document.getElementById("endereco")
+    const casaNumero = document.getElementById("casaNumero")
+
+    fetch("http://localhost:4002/api/pc/cadastrarcompra", {
+        method: "POST", 
+        headers: {
+            accept: "application/json",
+            "content-type": "application/json"
+        },
+        body: JSON.stringify({
+            nome:nome.value,
+            email:email.value,
+            telefone:telefone.value,
+            cpf:cpf.value,
+            rg:rg.value,
+            endereco:endereco.value,
+            casaNumero:casaNumero.value
+        })
+    })
+    .then((resultado) => resultado.json())
+    .then((dados) => {
+        alert(`${dados.output}`)
+        // limpar o formulario
+        nome.value = "";
+        email.value = "";
+        telefone.value = "";
+        cpf.value = "";
+        rg.value = "";
+        endereco.value = "";
+        casaNumero.value = "";
+    })
+    .catch((err) => console.error(err));
+}
