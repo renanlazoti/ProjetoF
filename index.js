@@ -36,6 +36,9 @@ const tabeladuvida = mongoose.Schema({
 });
 
 const tabelacompra = mongoose.Schema({
+    pix:{type:String,require},
+    cartao:{type:String,require},
+    boleto:{type:String,require},
     nome:{type:String,require},
     email:{type:String,require},
     telefone:{type:String,require},

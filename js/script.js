@@ -188,6 +188,9 @@ function Duvida(){
 }
 
 function Compra(){
+    const pix = document.getElementById("pix")
+    const cartao = document.getElementById("cartao")
+    const boleto = document.getElementById("boleto")
     const nome = document.getElementById("nome")
     const email = document.getElementById("email")
     const telefone = document.getElementById("telefone")
@@ -203,6 +206,9 @@ function Compra(){
             "content-type": "application/json"
         },
         body: JSON.stringify({
+            pix:pix.value,
+            cartao:cartao.value,
+            boleto:boleto.value,
             nome:nome.value,
             email:email.value,
             telefone:telefone.value,
@@ -216,6 +222,7 @@ function Compra(){
     .then((dados) => {
         alert(`${dados.output}`)
         // limpar o formulario
+        pagamento.value = "";
         nome.value = "";
         email.value = "";
         telefone.value = "";
